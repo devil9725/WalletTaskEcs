@@ -13,8 +13,8 @@ namespace Counter.UI
             _entityManager = entityManager;
             _targetEntity = targetEntity;
             _balanceCheatView = balanceCheatView;
-            _balanceCheatView.onClearClick += OnClearButtonClick;
-            _balanceCheatView.onPlusClick += OnPlusButtonClick;
+            _balanceCheatView.OnClearClick += OnClearButtonClick;
+            _balanceCheatView.OnPlusClick += OnPlusButtonClick;
         }
 
         private void OnClearButtonClick()

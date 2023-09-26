@@ -7,12 +7,12 @@ namespace Counter.UI
 {
     public class BalanceCheatView : MonoBehaviour
     {
+        public Action OnPlusClick;
+        public Action OnClearClick;
+
         [SerializeField] private TMP_Text _caption;
         [SerializeField] private Button _plus;
         [SerializeField] private Button _clear;
-
-        public Action onPlusClick;
-        public Action onClearClick;
 
         private void Start()
         {
@@ -27,12 +27,12 @@ namespace Counter.UI
 
         public void OnPlusButtonClick()
         {
-            onPlusClick?.Invoke();
+            OnPlusClick?.Invoke();
         }
 
         public void OnClearButtonClick()
         {
-            onClearClick?.Invoke();
+            OnClearClick?.Invoke();
         }
     }
 }
